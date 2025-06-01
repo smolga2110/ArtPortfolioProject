@@ -11,9 +11,11 @@ function ArtList(){
     const inputFile = useRef(null);
 
     const onImageChange = (event) => {
+
         if (event.target.files && event.target.files[0]) {
             setNewArtRoute(URL.createObjectURL(event.target.files[0]))
         }
+
     }
 
     const addArt = () => {
@@ -54,7 +56,9 @@ function ArtList(){
                     ref={inputFile}
 
                 />
-                <button onClick={addArt}>Загрузить</button>
+
+                {newArtRoute === null ? (<button id="upload_button" disabled='true'>Выберите Арт</button>) : (<button id="upload_button" onClick={addArt}>Загрузить</button>)}
+
             </div>
 
             <div>
