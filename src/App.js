@@ -1,12 +1,11 @@
 import './App.css';
-import ArtList from './components/artList';
+import Layout from './components/layouts/layout'
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Мои арты</h1>
-      <ArtList/>
+      <Layout/>
     </div>
   );
 }
