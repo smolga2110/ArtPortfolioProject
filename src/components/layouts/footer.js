@@ -1,11 +1,11 @@
+import './styles/footer.css'
 
 function Footer(){
     return(
         <footer>
-            <div>
+            <div className='footer_container'>
                 <span>What is copyrights?</span>
-                <div>
-                    <span>Contacts</span>
+                <div className='contacts_container'>
                     <ul>
                         <li>
                             <a>GitHub</a>

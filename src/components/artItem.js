@@ -1,7 +1,8 @@
+import './styles/artItem.css'
 
 function ArtItem({art}){
     return(
-        <div>
+        <div className='artitem_container'>
             <figure>
                 <img src={art.route} alt={art.title}></img>
             </figure>
