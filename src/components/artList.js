@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import ArtItem from './artItem';
+import './styles/artList.css'
 
 function ArtList(){
     const [arts, setArts] = useState([]);
@@ -61,7 +62,7 @@ function ArtList(){
 
             </div>
 
-            <div>
+            <div className="arts_container">
                 {arts.length === 0 ? (
                 <p>Артов нет на данный момент</p>
             ) : (

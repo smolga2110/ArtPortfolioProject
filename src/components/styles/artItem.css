@@ -1,10 +1,35 @@
 .artitem_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    width: 450px;
+    height: 450px;
+    padding: 5px;
+}
+
+.artitem_container figure{
+    margin: 0;
+    box-shadow: inset 0px 0px 77px 3px #0d0d11;
+    height: 450px;
 }
 
 .artitem_container figure img{
-    width: 240px;
-    height: 240px;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.artitem_container figcaption{
+    position: relative;
+    bottom: 60px;
+    left: 20px;
+}
+.artitem_container figcaption h3{
+    color: aliceblue;
+    margin: 0px;
+}
+
+.artitem_container figcaption p{
+    color: aliceblue;
+    margin: 0px;
 }
