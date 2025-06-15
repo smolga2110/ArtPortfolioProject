@@ -33,34 +33,42 @@ function ArtList(){
         setNewArtRoute(null);
         setNewAuthor('');
 
+        let vis = document.getElementById('visib');
+        vis.setAttribute('hidden', 'true')
+
     }
 
     return(
         <div>
-            <div>
-                <input
-                    type="text"
-                    value={newArtTitle}
-                    onChange={(e) => setNewArtTitle(e.target.value)}
-                    placeholder="Название арта"
-                />
-                <input
-                    type="text"
-                    value={newAuthor}
-                    onChange={(e) => setNewAuthor(e.target.value)}
-                    placeholder="Автор"
-                />
-                <input
-                    type="file"
-                    onChange={onImageChange}
-                    id="file"
-                    ref={inputFile}
+            <div className="upload_overlay" id="visib">
+                <div className="upload_container">
+                    <input
+                        type="text"
+                        value={newArtTitle}
+                        onChange={(e) => setNewArtTitle(e.target.value)}
+                        placeholder="Название арта"
+                    />
+                    <input
+                        type="text"
+                        value={newAuthor}
+                        onChange={(e) => setNewAuthor(e.target.value)}
+                        placeholder="Автор"
+                    />
+                    <label for="file">Browse...</label>
+                    <input
+                        type="file"
+                        onChange={onImageChange}
+                        id="file"
+                        ref={inputFile}
+                    />
 
-                />
+                    <img src={newArtRoute} alt=""></img>
 
-                {newArtRoute === null ? (<button id="upload_button" disabled='true'>Выберите Арт</button>) : (<button id="upload_button" onClick={addArt}>Загрузить</button>)}
+                    {newArtRoute === null ? (<button id="upload_button" disabled='true'>Выберите Арт</button>) : (<button id="upload_button" onClick={addArt}>Загрузить</button>)}
 
+                </div>
             </div>
+            
 
             <div className="arts_container">
                 {arts.length === 0 ? (
